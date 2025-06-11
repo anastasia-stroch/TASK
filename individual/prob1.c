@@ -25,8 +25,6 @@ int main()
     char ch;
     int size_str = 0;
     int str_length = 0;
-    
-    // memset(cnt, 0, cnt_len * sizeof(cnt[0]));
     bzero(cnt, cnt_len * sizeof(cnt[0]));
 
     scanf("%d", &str_length);
@@ -69,67 +67,3 @@ int main()
     free(str);
     return 0;
 }
-
-
-
-
-
-
-
-
-// #include <stdlib.h>
-// #include <string.h>
-
-// void input(size_t *alpha, const size_t alpha_len)
-// {
-//     char ch;
-//     size_t str_len;
-
-//     bzero(alpha, alpha_len * sizeof(alpha[0]));
-//     scanf("%d", &str_len);
-//     scanf("%c", &ch); // for '\n' if need
-
-//     for (int i = 0; i < str_len; i++)
-//     {
-//         scanf("%c", &ch);
-//         ++alpha[ch - 'A'];
-//     }
-// }
-
-// int main()
-// {
-//     const size_t alpha_len = 26;
-//     size_t alpha[alpha_len];
-//     char *str;
-//     size_t str_len = 0;
-//     int is_odd = -1;
-
-//     input(alpha, alpha_len);
-
-//     for (size_t i = 0; i < alpha_len; ++i)
-//     {
-//         str_len += (alpha[i] >> 1);
-//         if (alpha[alpha_len - 1 - i] & 1)
-//             is_odd = alpha_len - 1 - i;
-//     }
-//     str_len = (str_len >> 1) + (is_odd != -1);
-//     str = malloc(sizeof(char) * str_len);
-
-//     for (size_t i = 0, k = 0; i < alpha_len; ++i)
-//     {
-//         while (alpha[i] > 1)
-//         {
-//             str[k] = 'A' + alpha[i];
-//             str[str_len - 1 - k] = 'A' + alpha[i];
-//             alpha[i] -= 2;
-//             ++k;
-//         }
-//     }
-
-//     if (is_odd != -1)
-//         str[str_len << 1] = alpha[is_odd] + 'A';
-
-//     printf("%s\n", str);
-//     free(str);
-//     return 0;
-// }

@@ -10,8 +10,6 @@ typedef struct s_list
 typedef struct s_stack 
 {
     t_list *head;
-    // size_t size;
-    // size_t capacity;
 } t_stack;
 
 t_list *ft_lstnew(void *content)

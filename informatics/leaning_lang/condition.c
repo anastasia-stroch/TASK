@@ -206,7 +206,7 @@ void change()
     
     scanf("%d %d %d %d",
             &price_rub, &price_kop, &pay_rub, &pay_kop);
-    price_kop += 100 * price_rub; // price_kop = price_kop + 100 * price_rub;
+    price_kop += 100 * price_rub;
     pay_kop += 100 * pay_rub;
     pay_kop -= price_kop;
     printf("%d %d", pay_kop / 100, pay_kop % 100);
@@ -290,7 +290,7 @@ int cows()
     scanf("%d", &x1);
     r10 = x1 % 10;
     r100 = x1 % 100;
-    if (r10 == 1 && r100 != 11) // 1 21 31 101 111 231 211 201
+    if (r10 == 1 && r100 != 11)
     {
         printf("%d korova", x1);
     }

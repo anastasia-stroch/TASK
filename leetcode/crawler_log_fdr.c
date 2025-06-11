@@ -90,17 +90,4 @@ void minStackFree(MinStack* obj) {
     }
 }
 
-int main()
-{
-    MinStack *x = minStackCreate();
-    minStackPush(x, 2);
-    minStackPush(x, 7);
-    printf("%d \n",minStackTop(x));
-    printf("%d \n", minStackGetMin(x));
-    stackprint(x);
-    minStackFree(x);
-    stackprint(x);
-
-}
-
 // https://leetcode.com/problems/min-stack/description/

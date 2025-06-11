@@ -27,7 +27,7 @@ void div_apple2()
     int y;
 
     scanf("%d%d", &x,&y);
-    printf("%d", y % x); // y - y / x * x;
+    printf("%d", y % x);
 }
 
 // https://informatics.msk.ru/mod/statements/view.php?id=2296&chapterid=2940#1

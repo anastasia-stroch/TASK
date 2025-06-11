@@ -19,7 +19,6 @@ void amount_of_dividers()
     printf("%d", d);
 }
 
-// 2 2 3 3 3 3 11
 void prime_factors()
 {
     int number;

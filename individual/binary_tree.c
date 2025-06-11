@@ -1,3 +1,5 @@
+#include <stdlib.h>
+
 typedef struct s_tree
 {
     int value;
@@ -19,27 +21,40 @@ t_tree *btree_node_new(int value, t_tree *left, t_tree *right)
 
 void btree_node_insert(t_tree **root, int value)
 {
-    while (*)
-}
+    t_tree *prev;
+    t_tree *walker;
+    t_tree *node;
 
-int main()
-{
-    t_tree *root = /* NULL; */
-    btree_node_new(7,
-        btree_node_new(5, 
-            btree_node_new(2, NULL, NULL),
-            btree_node_new(6, NULL, NULL)),
-        btree_node_new(14,
-                        btree_node_new(9, NULL, NULL),
-                        NULL));
-    
-    // btree_node_insert(&root, 7);
-    // btree_node_insert(&root, 5);
-    // btree_node_insert(&root, 14);
-    // btree_node_insert(&root, 2);
-    // btree_node_insert(&root, 6);
-    // btree_node_insert(&root, 9);
-    btree_node_insert(&root, 8);
+    if (root == NULL)
+    {
+        return ;
+    }
 
-    return 0;
+    walker = *root;
+    node = btree_node_new(value, NULL, NULL);
+    if (walker == NULL)
+    {
+        *root = node;
+        return ;
+    }
+    while (walker != NULL)
+    {
+        prev = walker;
+        if (value > walker->value)
+        {
+            walker = walker->right;
+        }
+        else if (value < walker->value)
+        {
+            walker = walker->left;
+        }
+    }
+    if (value > prev->value)
+    {
+        prev->right = node;
+    }
+    else if (value < prev->value)
+    {
+        prev->left = node;
+    }
 }

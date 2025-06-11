@@ -23,11 +23,6 @@ char *ft_strjoin(char const *s1, char const *s2)
     return (str);
 }
 
-// int a;
-// b = (a = 4);
-// if (a)
-//     printf("hello");
-
 typedef struct  s_list
 {
     void            *content;
@@ -81,7 +76,6 @@ char **ft_split(char const *s, char c)
             if (i != prev)
             { 
                 char *str = (char *)malloc(sizeof(char) * (i - prev));
-                // strncpy(s + prev, str, i - prev - 1);
                 
                 k = prev;
                 while (s[k] != c)

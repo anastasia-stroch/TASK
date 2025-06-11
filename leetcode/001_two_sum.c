@@ -19,18 +19,3 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize)
 
     return arr;
 }
-
-
-// Согласно принципам структурного программирования лучше делать так
-// {
-//     while (i < numsSize && nums[i] + nums[j] != target)
-//     {
-//         j = i + 1;
-//         while (j < numsSize && nums[i] + nums[j] != target)
-//             ++j;
-//         ++i;
-//     }
-//     arr[0] = i;
-//     arr[1] = j;
-// }
-
